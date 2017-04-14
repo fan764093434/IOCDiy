@@ -8,6 +8,18 @@
 
 [Darren的简书](http://www.jianshu.com/p/c0ec2a7fc26a)
 
+**使用方法**
+```
+compile 'com.github.fan764093434:IOCDiy:-SNAPSHOT'
+```
+```
+allprojects {
+    repositories {
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
 **什么是IOC？**
 
 *IOC是Inversion of control的简写，控制反转的意思。*
