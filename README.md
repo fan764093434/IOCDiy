@@ -20,6 +20,28 @@ allprojects {
     }
 }
 ```
+```
+public class MainActivity extends AppCompatActivity {
+
+    @FindViewById(R.id.text_one)
+    TextView testIv;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        IOCUtils.bind(this);
+        testIv.setText("我是自己的IOC完成的!");
+    }
+
+    @OnClick(R.id.text_one)
+    @CheckNet("TMD,断网了!")//网络监测，不加则不检测
+    public void onViewClicked(View view) {
+        Log.e("fsw--", "点击");
+    }
+
+}
+```
 **什么是IOC？**
 
 *IOC是Inversion of control的简写，控制反转的意思。*
